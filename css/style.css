@@ -69,9 +69,13 @@ header .container{
     padding:0 0 50px 0;
 }
 .header-top{
-    margin-top:0.9em;
+    position: absolute;
+    width:100%;
+    padding-top:13px;
     background-color: rgba(0,0,0,.3);
     border-bottom: 1px solid rgba(255,255,255,.2);
+    z-index: 5;
+    height:91px;
 }
 .logo-box{
     position: absolute;
@@ -92,9 +96,114 @@ header .container{
     margin-right: 20px;
 }
 .header-top-nav li a{
-    color:#788482;
+    color:#888;
     font-size:13.1px;
 }
 .header-top-nav li a:hover{
+    text-decoration: underline;
+}
+.header-quick{
+    position: relative;
+    width:1100px;
+    z-index: 5;
+}
+.header-quick a{
+    display: inline-block;
+    position: absolute;
+    top:6px;
+    width:36px;
+    height:36px;
+    background-position: center;
+    color:#444;
+}
+.quick-view{
+    background: url('../images/ico/ico-sitemap-white.png') no-repeat;
+    left:0;
+}
+.quick-search{
+    background: url('../images/ico/ico-search-white.png') no-repeat;
+    left:40px;
+}
+.quick-reserve{
+    background: url('../images/ico/ico-schedule-white.png') no-repeat;
+    right:40px;
+}
+.quick-mypage{
+    background: url('../images/ico/ico-mymega-white.png')no-repeat;
+    right:0;
+    top:9px;
+}
+.backpan{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:135px;
+}
+.header-hide{
+    position: absolute;
+    top:92px;
+    width:100%;
+    height:44px;
+}
+.header-hide.on{
+    background-color: rgba(0,0,0,0.2);
+}
+.header-gnb{
+    position: relative;
+    width:1100px;
+    margin:0 auto;
+}
+.header-gnb>li>a{
+    position: absolute;
+    top:-40px;
+    display: block;
+    width:30px;
+    height:40px;
+    color:#fff;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    z-index: 99;
+    background-color: transparent;
+}
+.header-gnb>li>a.on{
+    border-bottom:3px solid #fff;
+}
+.nav-movie{
+    left:166px;
+}
+.nav-reserve{
+    left:256px;
+}
+.nav-theater{
+    left:345px;
+}
+.header-gnb>li>a.nav-event{
+    right:344px;
+    width:48px;
+}
+.header-gnb>li>a.nav-store{
+    right:237px;
+    width:48px;
+}
+.nav-benefit{
+    right:149px;
+}
+.header-lnb{
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+.header-lnb.on{
+    display: flex;
+}
+.header-lnb>li:not(:first-child){
+    margin-left:19px;
+}
+.header-lnb>li>a{
+    color:#fff;
+    line-height: 44px;
+}
+.header-lnb>li>a:hover{
     text-decoration: underline;
 }
