@@ -25,7 +25,7 @@ $(function(){
 const quickView = document.getElementById('quick-view');
 const quickSearch = document.getElementById('quick-search');
 const quickMypage = document.getElementById('quick-mypage');
-
+const quickSearchMenu = document.getElementById('quick-search-menu');
 // 퀵뷰 오픈
 function quickViewOpen(){
     quickMypage.classList.remove('on');
@@ -38,6 +38,7 @@ function quickSearchOpen(){
     quickMypage.classList.remove('on');
     quickSearch.classList.toggle('on');
     quickView.classList.remove('on');
+    quickSearchMenu.classList.toggle('on');
 }
 
 // 퀵마이페이지 오픈
