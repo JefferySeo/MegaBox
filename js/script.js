@@ -21,3 +21,28 @@ $(function(){
 
 
 }); // jQuery
+
+const quickView = document.getElementById('quick-view');
+const quickSearch = document.getElementById('quick-search');
+const quickMypage = document.getElementById('quick-mypage');
+
+// 퀵뷰 오픈
+function quickViewOpen(){
+    quickMypage.classList.remove('on');
+    quickSearch.classList.remove('on');
+    quickView.classList.toggle('on');
+}
+
+// 퀵서치 오픈
+function quickSearchOpen(){
+    quickMypage.classList.remove('on');
+    quickSearch.classList.toggle('on');
+    quickView.classList.remove('on');
+}
+
+// 퀵마이페이지 오픈
+function quickMyOpen(){
+    quickMypage.classList.toggle('on');
+    quickSearch.classList.remove('on');
+    quickView.classList.remove('on');
+}

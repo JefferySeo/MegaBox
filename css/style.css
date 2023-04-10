@@ -98,6 +98,7 @@ header .container{
 .header-top-nav li a{
     color:#888;
     font-size:13.1px;
+
 }
 .header-top-nav li a:hover{
     text-decoration: underline;
@@ -120,9 +121,15 @@ header .container{
     background: url('../images/ico/ico-sitemap-white.png') no-repeat;
     left:0;
 }
+.quick-view.on{
+    background: url('../images/ico/btn-header-layer-close.png');
+}
 .quick-search{
     background: url('../images/ico/ico-search-white.png') no-repeat;
     left:40px;
+}
+.quick-search.on{
+    background: url('../images/ico/btn-header-layer-close.png');
 }
 .quick-reserve{
     background: url('../images/ico/ico-schedule-white.png') no-repeat;
@@ -132,6 +139,9 @@ header .container{
     background: url('../images/ico/ico-mymega-white.png')no-repeat;
     right:0;
     top:9px;
+}
+.quick-mypage.on{
+    background: url('../images/ico/btn-header-layer-close.png');
 }
 .backpan{
     position: absolute;
