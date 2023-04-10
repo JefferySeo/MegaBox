@@ -1,4 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .top-adver{
     background-color: #DBEDF9;
     height:80px;
@@ -143,13 +144,8 @@ header .container{
 .quick-mypage.on{
     background: url('../images/ico/btn-header-layer-close.png');
 }
-.backpan{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:135px;
-}
+
+
 .header-hide{
     position: absolute;
     top:92px;
@@ -228,4 +224,97 @@ header .container{
 }
 .quick-search-menu.on{
     display: block;
+}
+.tab-rank{
+    padding-top:50px;
+}
+.tab-flex{
+    display: flex;
+}
+.tab-flex>li:last-child{
+    margin-left:30px;
+}
+.tab-flex>li>a{
+    color:#fff;
+    display: block;
+    padding-bottom:8px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    border-bottom:2px solid transparent;
+}
+.tab-flex>li.on>a{
+    border-color: #fff;
+}
+.tab-view{
+    position:relative;
+    margin-top: 30px;
+    min-height: 215px;
+    padding:0 0 0 200px;
+}
+.tab-view>.tab-img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:150px;
+    height:214px;
+    margin:0;
+}
+.tab-view>.tab-img>img{
+    width:100%;
+    height:100%;
+}
+.tab-list{
+    width:250px;
+}
+.tab-list>ul>li>em{
+    display: inline-block;
+    margin: 0 10px 0 0;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 1.8666em;
+    color: #fff;
+    font-weight: 300;
+    vertical-align: middle;
+}
+.tab-list>ul>li>a{
+    color:#fff;
+}
+.header-search-area{
+    position: absolute;
+    left: 560px;
+    top: 63px;
+    width: 420px;
+    height: 60px;
+    border-bottom: 1px solid #fff;
+}
+#header-search{
+    font-family: 'NanumBarunGothic','Dotum','돋움',sans-serif;
+    padding: 0 10px;
+    line-height: 30px;
+    display: block;
+    float: left;
+    width: 360px;
+    height: 59px;
+    border: 0;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: transparent;
+}
+#header-search:focus{
+    border: none;
+}
+#header-search::placeholder{
+    color:#fff;
+}
+#btn-header-search{
+    overflow: hidden;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+    border: 0;
+    background: url('../images/ico/ico-search-white.png') no-repeat center;
+    cursor: pointer;
 }

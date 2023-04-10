@@ -19,6 +19,10 @@ $(function(){
         $('.header-gnb>li>.header-lnb').removeClass('on');
     })
 
+    $('.tab-flex>li').click(function(){
+        $('.tab-flex>li').removeClass('on');
+        $(this).addClass('on');
+    })
 
 }); // jQuery
 
@@ -30,20 +34,23 @@ const quickSearchMenu = document.getElementById('quick-search-menu');
 function quickViewOpen(){
     quickMypage.classList.remove('on');
     quickSearch.classList.remove('on');
+    quickSearchMenu.classList.remove('on');
     quickView.classList.toggle('on');
 }
 
 // 퀵서치 오픈
 function quickSearchOpen(){
     quickMypage.classList.remove('on');
-    quickSearch.classList.toggle('on');
+    
     quickView.classList.remove('on');
+    quickSearch.classList.toggle('on');
     quickSearchMenu.classList.toggle('on');
 }
 
 // 퀵마이페이지 오픈
 function quickMyOpen(){
-    quickMypage.classList.toggle('on');
     quickSearch.classList.remove('on');
     quickView.classList.remove('on');
+    quickSearchMenu.classList.remove('on');
+    quickMypage.classList.toggle('on');
 }
