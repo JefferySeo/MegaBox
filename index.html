@@ -51,39 +51,64 @@
                 
             </div>    
         </div>
+
         <div class="quick-search-menu" id="quick-search-menu">
             <div class="container">
                 <div class="tab-rank">
                     <ul class="tab-flex">
-                        <li><a href="javascript:void(0)">예매율 순</a></li>
-                        <li><a href="javascript:void(0)">메가박스 관객순</a></li>
+                        <li class="on" onclick="tablistOpen(0)"><a href="javascript:void(0)">예매율 순</a></li>
+                        <li onclick="tablistOpen(1)"><a href="javascript:void(0)">메가박스 관객순</a></li>
                     </ul>
                 </div>
                 <div class="tab-view">
                     <p class="tab-img">
-                        <img src="images/rate/john.jpg" alt="#">
+                        <img src="images/rate/john.jpg" alt="#" id="poster">
                     </p>
+                    <div class="tab-list on">
+                        <ul>
+                            <li>
+                                <em>1</em>
+                                <a href="javascript:void(0)" class="one" data-imgsrc="images/rate/john.jpg">존 윅 4</a>
+                            </li>
+                            <li>
+                                <em>2</em>
+                                <a href="javascript:void(0)" data-imgsrc="images/rate/showman.jpg">위대한 쇼맨</a>
+                            </li>
+                            <li>
+                                <em>3</em>
+                                <a href="javascript:void(0)" data-imgsrc="images/rate/meongmoong.jpg">멍뭉이</a>
+                            </li>
+                            <li>
+                                <em>4</em>
+                                <a href="javascript:void(0)" data-imgsrc="images/rate/slamdunk.jpg">더 퍼스트 슬램덩크</a>
+                            </li>
+                            <li>
+                                <em>5</em>
+                                <a href="javascript:void(0)" data-imgsrc="images/rate/suzume.jpg">스즈메의 문단속</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="tab-list">
                         <ul>
                             <li>
                                 <em>1</em>
-                                <a href="#">존 윅 4</a>
+                                <a href="javascript:void(0)" class="one" data-imgsrc="images/people/avatar.jpg">아바타: 물의 길</a>
                             </li>
                             <li>
                                 <em>2</em>
-                                <a href="#">위대한 쇼맨</a>
+                                <a href="javascript:void(0)" data-imgsrc="images/people/lemeserable.jpg">레미제라블</a>
                             </li>
                             <li>
                                 <em>3</em>
-                                <a href="#">멍뭉이</a>
+                                <a href="javascript:void(0)" data-imgsrc="images/people/slamdunk.jpg">더 퍼스트 슬램덩크</a>
                             </li>
                             <li>
                                 <em>4</em>
-                                <a href="#">더 퍼스트 슬램덩크</a>
+                                <a href="javascript:void(0)" data-imgsrc="images/people/suzume.jpg">스즈메의 문단속</a>
                             </li>
                             <li>
                                 <em>5</em>
-                                <a href="#">스즈메의 문단속</a>
+                                <a href="javascript:void(0)" data-imgsrc="images/people/beginagain.jpg">비긴어게인</a>
                             </li>
                         </ul>
                     </div>
@@ -150,6 +175,10 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+        <div class="header-box-office container">
+            <p class="box-office"><a href="#">박스오피스</a></p>
+            <a href="#">더 많은 영화보기 <i class="fa-solid fa-plus"></i></a>
         </div>
     </header>
 <!-- 

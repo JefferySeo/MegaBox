@@ -19,9 +19,16 @@ $(function(){
         $('.header-gnb>li>.header-lnb').removeClass('on');
     })
 
+    // 탭리스트 on 걸기
     $('.tab-flex>li').click(function(){
         $('.tab-flex>li').removeClass('on');
         $(this).addClass('on');
+    })
+
+    // 탭랭크 포스터 바꾸기
+    $('.tab-list>ul>li>a').hover(function(){
+        let imgsrc = $(this).data('imgsrc');
+        $('#poster').attr('src', imgsrc);
     })
 
 }); // jQuery
@@ -53,4 +60,18 @@ function quickMyOpen(){
     quickView.classList.remove('on');
     quickSearchMenu.classList.remove('on');
     quickMypage.classList.toggle('on');
+}
+
+
+// 퀵 탭뷰 포스터 고정
+const poster = document.getElementById('poster');
+const one = document.getElementsByClassName('one');
+const tablist = document.getElementsByClassName('tab-list');
+// 퀵 탭리스트 전환
+function tablistOpen(e){
+    for(let i = 0 ; i < tablist.length ; i++){
+        tablist[i].classList.remove('on');
+    }
+    tablist[e].classList.add('on');
+    poster.src = one[e].dataset.imgsrc;
 }

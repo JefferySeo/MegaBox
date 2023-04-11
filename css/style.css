@@ -265,6 +265,10 @@ header .container{
 }
 .tab-list{
     width:250px;
+    display:none;
+}
+.tab-list.on{
+    display: block;
 }
 .tab-list>ul>li>em{
     display: inline-block;
@@ -278,6 +282,12 @@ header .container{
 }
 .tab-list>ul>li>a{
     color:#fff;
+}
+.tab-list>ul>li>a:hover{
+    text-decoration: underline;
+}
+.tab-list>ul>li>a>img{
+    display: none;
 }
 .header-search-area{
     position: absolute;
@@ -301,7 +311,7 @@ header .container{
     background-color: transparent;
 }
 #header-search:focus{
-    border: none;
+    outline: none;
 }
 #header-search::placeholder{
     color:#fff;
@@ -317,4 +327,31 @@ header .container{
     border: 0;
     background: url('../images/ico/ico-search-white.png') no-repeat center;
     cursor: pointer;
+}
+
+/*** box office ***/
+.header-box-office{
+    position: relative;
+    margin-top:166px;
+    z-index: 50;
+}
+.header-box-office>p{
+    text-align: center;
+}
+.header-box-office>p>a{
+    display: inline-block;
+    color:#fff;
+    padding-bottom:3px;
+    font-size: 16px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    letter-spacing: -0.5px;
+}
+.header-box-office>a{
+    position: absolute;
+    top:10px;
+    right:0;
+    color:#999;
+}
+.header-box-office>a:hover{
+    text-decoration: underline;
 }
