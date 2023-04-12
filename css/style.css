@@ -342,7 +342,7 @@ header .container{
 .header-box-office>p>a{
     display: inline-block;
     color:#fff;
-    padding-bottom:3px;
+    padding-bottom:2px;
     font-size: 16px;
     border-bottom: 2px solid rgba(255,255,255,0.2);
     letter-spacing: -0.5px;
@@ -393,13 +393,13 @@ header .container{
 }
 .rank-imgbox{
     position: absolute;
-    top:9px;
+    top:10px;
     right:10px;
 }
 .rank-imgbox>p{
     display: inline-block;
     background-color: rgba(0,0,0,0.6);
-    padding:8px 8px 1px 8px;
+    padding:8px 8px 0px 8px;
     border-radius: 3px;
     margin:0;
     margin-left: 4px;
@@ -441,4 +441,71 @@ header .container{
     font-size:25px;
     color:#59bec9;
     margin-left:20px;
+}
+.btn-area{
+    position:absolute;
+    top:312px;
+    display:flex;
+    justify-content: space-between;
+
+}
+.office-btn-util{
+    width: 245px;
+    display: flex;
+    justify-content: space-between;
+}
+.office-btn-util>button{
+    width:80px;
+    height:36px;
+    color:#fff;
+    border:1px solid #555;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+.office-btn-util>.case{
+    width:160px;
+    text-align: center;
+}
+.office-btn-util>.case>a{
+    display: block;
+    height:36px;
+    background-color: #037b94;
+    color:#fff;
+    padding-top:7px;
+    border-radius: 5px;
+}
+.main-search-area{
+    position: relative;
+    width:1100px;
+    margin:0 auto;
+    margin-top:312px;
+    padding-top:23px;
+    height:75px;
+    background-color: rgba(0,0,0,0.2);
+    color:#fff;
+    z-index: 50;
+}
+.cell{
+    float:left;
+    width:25%;
+    height:30px;
+    text-align: center;
+}
+.cell:not(:first-child){
+    border-left: 1px solid #423e3e;
+}
+.mouse-move-area{
+    position: relative;
+    z-index: 50;
+    margin:0 auto;
+    margin-top:30px;
+    height:24px;
+    width:1100px;
+    text-align: center;
+}
+.mouse-move-area img{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:10px;
 }
