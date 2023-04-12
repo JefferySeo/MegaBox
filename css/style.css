@@ -279,6 +279,7 @@ header .container{
     color: #fff;
     font-weight: 300;
     vertical-align: middle;
+    transform:skewX(-5.5deg)
 }
 .tab-list>ul>li>a{
     color:#fff;
@@ -354,4 +355,90 @@ header .container{
 }
 .header-box-office>a:hover{
     text-decoration: underline;
+}
+.header-rankbox{
+    display: flex;
+    justify-content: space-between;
+    padding-top:5px;
+}
+.office-moviebox{
+    display: block;
+    width:245px;
+    position: relative;
+}
+.office-moviebox>img{
+    position: absolute;
+    left:0;
+    top:0;
+    border-radius: 5px;
+}
+.office-moviebox>img:first-child{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 245px;
+    height: 352px;
+}
+.ranktext{
+    position: absolute;
+    top:4px;
+    left:17px;
+    font-family: 'Roboto';
+    font-style: italic;
+    color:#fff;
+    font-size:30px;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    transform:skewX(-5.5deg)
+}
+.rank-imgbox{
+    position: absolute;
+    top:9px;
+    right:10px;
+}
+.rank-imgbox>p{
+    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+    padding:8px 8px 1px 8px;
+    border-radius: 3px;
+    margin:0;
+    margin-left: 4px;
+}
+.office-review{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 352px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.8);
+    padding:25px;
+    display: none;
+}
+.office-scenario{
+    height:152px;
+    overflow: hidden;
+    color:#fff;
+}
+.office-score{
+    border-top: 1px solid #3c3c3c;
+    position: absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+    text-align: center;
+    padding-top: 10px;
+}
+.office-score>p{
+    display: inline-block;
+    color:#fff;
+    font-size:14px;
+    margin: 0;
+    line-height: 36px;
+    vertical-align: middle;
+}
+.office-score>p:last-child{
+    font-size:25px;
+    color:#59bec9;
+    margin-left:20px;
 }

@@ -31,6 +31,11 @@ $(function(){
         $('#poster').attr('src', imgsrc);
     })
 
+    // 박스오피스 상세설명 띄우기
+    $('.office-moviebox').hover(function(){
+        $(this).find('.office-review').stop().fadeToggle(200);
+    })
+
 }); // jQuery
 
 const quickView = document.getElementById('quick-view');
