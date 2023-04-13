@@ -36,8 +36,6 @@ $(function(){
         $(this).find('.office-review').stop().fadeToggle(200);
     })
     
-    // 메인 마우스 무브
-    
 
 }); // jQuery
 
