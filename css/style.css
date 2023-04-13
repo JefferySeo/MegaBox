@@ -461,6 +461,7 @@ header .container{
     border:1px solid #555;
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
+    cursor: pointer;
 }
 .office-btn-util>.case{
     width:160px;
