@@ -488,11 +488,62 @@ header .container{
 .cell{
     float:left;
     width:25%;
-    height:30px;
     text-align: center;
 }
 .cell:not(:first-child){
     border-left: 1px solid #423e3e;
+}
+.main-search{
+    display: inline-block;
+    width:200px;
+    height:30px;
+    border-bottom: 1px solid #555;
+    position: relative;
+    padding:0 30px 0 0;
+}
+.main-input{
+    display: inline-block;
+    border:none;
+    background-color: transparent;
+    line-height:30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    padding:0 10px;
+    letter-spacing: -1px;
+}
+.main-input:focus{
+    outline: none;
+}
+.ico-search{
+    display: inline-block;
+    background-color: transparent;
+    background:url(../images/ico/ico-search-white.png) no-repeat;
+    width:30px;
+    height:30px;
+    border:none;
+    cursor: pointer;
+    position: absolute;
+    top:5px;
+    right: 0;
+}
+.main-search-area a{
+    display: inline-block;
+    height:30px;
+    color:#fff;
+}
+.main-search-area a:hover{
+    text-decoration: underline;
+}
+.main-search-area a i{
+    vertical-align: bottom;
+}
+.main-schedule{
+    display: inline-block;
+    background:url(../images/ico/ico-schedule-main.png) no-repeat;
+    width:24px;
+    height:26px;
+    margin-right: 5px;
 }
 .mouse-move-area{
     position: relative;
@@ -505,7 +556,17 @@ header .container{
 }
 .mouse-move-area img{
     position: absolute;
-    left:50%;
-    transform: translateX(-50%);
     top:10px;
+    animation-name: mousemove;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes mousemove{
+    40%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    
 }
