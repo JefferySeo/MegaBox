@@ -81,3 +81,78 @@ function tablistOpen(e){
     tablist[e].classList.add('on');
     poster.src = one[e].dataset.imgsrc;
 }
+
+let index = 1;
+const slide = document.getElementsByClassName('slide');
+const position = document.getElementsByClassName('position');
+const bar = document.getElementsByClassName('bar');
+function slideBenefit(){
+    if(index == 0){
+        slide[index].style.zIndex = 1;
+        slide[index].children[0].children[0].style.opacity = 1;
+        slide[index].children[0].children[0].style.top = 0;
+        slide[index].children[0].children[1].style.opacity = 1;
+        slide[index].children[0].children[1].style.left = '300px';
+        slide[5].style.zIndex = 0;
+        slide[5].children[0].children[0].style.opacity = 0;
+        slide[5].children[0].children[0].style.top = '100px';
+        slide[5].children[0].children[1].style.opacity = 0;
+        slide[5].children[0].children[1].style.left = '450px';
+
+    }else{
+        slide[index-1].style.zIndex = 0;
+        slide[index-1].children[0].children[0].style.opacity = 0;
+        slide[index-1].children[0].children[0].style.top = '100px';
+        slide[index-1].children[0].children[1].style.opacity = 0;
+        slide[index-1].children[0].children[1].style.left = '450px';
+        slide[index].style.zIndex = 1;
+        slide[index].children[0].children[0].style.opacity = 1;
+        slide[index].children[0].children[0].style.top = 0;
+        slide[index].children[0].children[1].style.opacity = 1;
+        slide[index].children[0].children[1].style.left = '300px';
+    }
+
+    for(let i = 0 ; i < bar.length ; i++){
+        bar[i].style.backgroundColor = '#ededed';
+    }
+    bar[index].style.backgroundColor = '#503396';
+
+    document.getElementById('cnum').innerHTML = index+1;
+    index++;
+    if(index == 6) index = 0;
+}
+function backSlideBenefit(){
+    if(index == 0){
+        slide[index].style.zIndex = 1;
+        slide[index].children[0].children[0].style.opacity = 0;
+        slide[index].children[0].children[0].style.top = '0';
+        slide[index].children[0].children[1].style.opacity = 0;
+        slide[index].children[0].children[1].style.left = '300px';
+        slide[5].style.zIndex = 0;
+        slide[5].children[0].children[0].style.opacity = 0;
+        slide[5].children[0].children[0].style.top = '100px';
+        slide[5].children[0].children[1].style.opacity = 0;
+        slide[5].children[0].children[1].style.left = '450px';
+
+    }else{
+        slide[index-1].style.zIndex = 0;
+        slide[index-1].children[0].children[0].style.opacity = 1;
+        slide[index-1].children[0].children[0].style.top = '0px';
+        slide[index-1].children[0].children[1].style.opacity = 1;
+        slide[index-1].children[0].children[1].style.left = '300px';
+        slide[index].style.zIndex = 1;
+        slide[index].children[0].children[0].style.opacity = 0;
+        slide[index].children[0].children[0].style.top = '100px';
+        slide[index].children[0].children[1].style.opacity = 0;
+        slide[index].children[0].children[1].style.left = '450px';
+    }
+
+    for(let i = 0 ; i < bar.length ; i++){
+        bar[i].style.backgroundColor = '#ededed';
+    }
+    bar[index].style.backgroundColor = '#503396';
+    
+    document.getElementById('cnum').innerHTML = index+1;
+    index--;
+    if(index == 0) index = 5;
+}
