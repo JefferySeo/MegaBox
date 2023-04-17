@@ -82,77 +82,89 @@ function tablistOpen(e){
     poster.src = one[e].dataset.imgsrc;
 }
 
+// 혜택 슬라이드
 let index = 1;
 const slide = document.getElementsByClassName('slide');
 const position = document.getElementsByClassName('position');
 const bar = document.getElementsByClassName('bar');
-function slideBenefit(){
-    if(index == 0){
-        slide[index].style.zIndex = 1;
-        slide[index].children[0].children[0].style.opacity = 1;
-        slide[index].children[0].children[0].style.top = 0;
-        slide[index].children[0].children[1].style.opacity = 1;
-        slide[index].children[0].children[1].style.left = '300px';
-        slide[5].style.zIndex = 0;
-        slide[5].children[0].children[0].style.opacity = 0;
-        slide[5].children[0].children[0].style.top = '100px';
-        slide[5].children[0].children[1].style.opacity = 0;
-        slide[5].children[0].children[1].style.left = '450px';
+const play = document.getElementsByClassName('btn-play')[0];
+const pause = document.getElementsByClassName('btn-pause')[0]
 
-    }else{
-        slide[index-1].style.zIndex = 0;
-        slide[index-1].children[0].children[0].style.opacity = 0;
-        slide[index-1].children[0].children[0].style.top = '100px';
-        slide[index-1].children[0].children[1].style.opacity = 0;
-        slide[index-1].children[0].children[1].style.left = '450px';
-        slide[index].style.zIndex = 1;
-        slide[index].children[0].children[0].style.opacity = 1;
-        slide[index].children[0].children[0].style.top = 0;
-        slide[index].children[0].children[1].style.opacity = 1;
-        slide[index].children[0].children[1].style.left = '300px';
-    }
+// 정방향 자동실행
+let interval = setInterval(slideBenefit, 5000);
 
-    for(let i = 0 ; i < bar.length ; i++){
-        bar[i].style.backgroundColor = '#ededed';
-    }
-    bar[index].style.backgroundColor = '#503396';
-
-    document.getElementById('cnum').innerHTML = index+1;
-    index++;
-    if(index == 6) index = 0;
+function playSlide(){
+    setInterval(slideBenefit, 5000);
+    play.style.display = 'none';
+    pause.style.display = 'block';
 }
-function backSlideBenefit(){
-    if(index == 0){
-        slide[index].style.zIndex = 1;
-        slide[index].children[0].children[0].style.opacity = 0;
-        slide[index].children[0].children[0].style.top = '0';
-        slide[index].children[0].children[1].style.opacity = 0;
-        slide[index].children[0].children[1].style.left = '300px';
-        slide[5].style.zIndex = 0;
-        slide[5].children[0].children[0].style.opacity = 0;
-        slide[5].children[0].children[0].style.top = '100px';
-        slide[5].children[0].children[1].style.opacity = 0;
-        slide[5].children[0].children[1].style.left = '450px';
 
+function pauseSlide(){
+    clearInterval(interval);
+    pause.style.display = 'none';
+    play.style.display = 'block';
+}
+// 정방향
+function slideBenefit(){
+    clearInterval(interval);
+    play.style.display = 'block';
+    pause.style.display = 'none';
+    let currentSlide = slide[index];
+    let previousSlide;
+    if(index == 0){
+        previousSlide = slide[5];
+    }else{
+        previousSlide = slide[index-1];
+    }
+
+    currentSlide.style.zIndex = 1;
+    currentSlide.children[0].children[0].style.cssText = 'opacity: 1; top: 0';
+    currentSlide.children[0].children[1].style.cssText = 'opacity: 1; left:300px';
+
+    previousSlide.style.zIndex = 0;
+    previousSlide.children[0].children[0].style.cssText = 'opacity: 0; top: 100px';
+    previousSlide.children[0].children[1].style.cssText = 'opacity: 0; left: 450px';
+
+    for(let i = 0 ; i < bar.length ; i++){
+        bar[i].style.backgroundColor = '#ededed';
+    }
+    bar[index].style.backgroundColor = '#503396';
+
+    document.getElementById('cnum').innerHTML = index+1;
+    index = (index + 1) % 6;
+}
+
+// 역방향
+function backSlideBenefit(){
+    clearInterval(interval);
+    play.style.display = 'block';
+    pause.style.display = 'none';
+    if(index == 0){
+        slide[index].style.zIndex = 0;
+        slide[index].children[0].children[0].style.cssText = 'opacity: 0; top: 100px';
+        slide[index].children[0].children[1].style.cssText = 'opacity: 0; left: 450px';
+
+        slide[5].style.zIndex = 1;
+        slide[5].children[0].children[0].style.cssText = 'opacity: 1; top: 0px';
+        slide[5].children[0].children[1].style.cssText = 'opacity: 1; left: 300px';
+
+        index = 5;
     }else{
         slide[index-1].style.zIndex = 0;
-        slide[index-1].children[0].children[0].style.opacity = 1;
-        slide[index-1].children[0].children[0].style.top = '0px';
-        slide[index-1].children[0].children[1].style.opacity = 1;
-        slide[index-1].children[0].children[1].style.left = '300px';
+        slide[index-1].children[0].children[0].style.cssText = 'opacity: 1; top: 0px';
+        slide[index-1].children[0].children[1].style.cssText = 'opacity: 1; left: 300px';
+        
         slide[index].style.zIndex = 1;
-        slide[index].children[0].children[0].style.opacity = 0;
-        slide[index].children[0].children[0].style.top = '100px';
-        slide[index].children[0].children[1].style.opacity = 0;
-        slide[index].children[0].children[1].style.left = '450px';
+        slide[index].children[0].children[0].style.cssText = 'opacity: 0; top: 100px';
+        slide[index].children[0].children[1].style.cssText = 'opacity: 0; left: 450px';
+        
+        index--;
     }
 
     for(let i = 0 ; i < bar.length ; i++){
         bar[i].style.backgroundColor = '#ededed';
     }
     bar[index].style.backgroundColor = '#503396';
-    
+
     document.getElementById('cnum').innerHTML = index+1;
-    index--;
-    if(index == 0) index = 5;
 }

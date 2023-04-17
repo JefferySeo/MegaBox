@@ -634,7 +634,7 @@ header .container{
     position: absolute;
     width:934px;
     height:325px;
-    transition: 300ms;
+    /* transition: 1000ms; */
 }
 .benefit-slider-view>.slide>.position{
     position: relative;
@@ -643,13 +643,13 @@ header .container{
     position:absolute;
     top:100px;
     opacity: 0;
-    transition: 300ms;
+    transition: 700ms;
 }
 .slider-bg{
     position: absolute;
     left:450px;
     opacity: 0;
-    transition: 300ms;
+    transition: 1000ms;
 }
 .slider-control{
     position: absolute;
@@ -687,7 +687,7 @@ header .container{
     margin-left:8px;
     cursor: pointer;
 }
-.btn-pause{
+.btn-play{
     display: none;
 }
 .page-count{
