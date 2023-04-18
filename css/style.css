@@ -772,3 +772,172 @@ header .container{
     background-image: url('../images/ico/ico-store-main.png');
     background-position: center 0px;
 }
+
+/*** curation ***/
+.curation{
+    background-color: #252451;
+    min-height:840px;
+    position: relative;
+}
+.curation .title{
+    color:#fff;
+    padding-bottom: 40px;
+}
+.curation .title a{
+    color:#aaa;
+    display: block;
+}
+.curation .title a:hover{
+    text-decoration: underline;
+}
+.curation .title a img{
+    margin-top: -4px;
+    margin-left: 5px;
+    vertical-align:middle;
+}
+.curr-img{
+    position: absolute;
+    z-index: 1;
+    padding:0;
+    width:100%;
+}
+.curr-img .bage{
+    position: absolute;
+    left:0;
+    top:-10px;
+    z-index: 2;
+    display: block;
+    width:123px;
+    height:135px;
+    font-size:0;
+    line-height: 0;
+}
+.curr-img .bage.classic{
+    background: url(../images/curation/bg-bage-curation-classic.png) no-repeat 0 0;
+}
+.curr-img>.c-img{
+    padding-left: 20px;
+    font-size: 0;
+    line-height: 0;
+}
+.curr-img>.c-img a{
+    display: block;
+    width:300px;
+    height: 430px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.curr-img>.c-img a img{
+    width:100%;
+    height: 100%;
+}
+.curr-btn{
+    width: 300px;
+    margin-left: 20px;
+    padding-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.curr-btn .left,.curr-btn .right{
+    width:calc(50% - 5px);
+}
+.curr-btn a{
+    display: block;
+    width:100%;
+    height:50px;
+    line-height: 48px;
+    font-size: 1.3333em;
+    padding:0;
+    border-radius: 4px;
+}
+.curr-btn .left a{
+    color:#fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.curr-btn .right a{
+    background-color: #037b94;
+    color:#fff;
+}
+.info-classic{
+    position: absolute;
+    left:370px;
+    top:0;
+    width:calc(100% - 370px);
+    color:#fff;
+}
+.info-classic .txt{
+    display: block;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1.33333em;
+    line-height: 1.1;
+}
+.info-classic .tit{
+    border-bottom: 1px solid #474681;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: 2.4em;
+    line-height: 1.1;
+}
+.curr-list{
+    padding:315px 0 0 370px;
+}
+.curr-list ul{
+    position: relative;
+    z-index: 3;
+}
+.curr-list ul li{
+    float:left;
+    width:170px;
+    margin-left: 16px;
+}
+.curr-list ul li:first-child{
+    margin:0;
+}
+.curr-list ul li a{
+    display: block;
+    position: relative;
+    color:#fff;
+}
+.curr-list ul li a .bage{
+    position: absolute;
+    left:10px;
+    top:-5px;
+    display: block;
+    width:35px;
+    height:50px;
+    font-size: 0;
+    line-height: 0;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 35px auto;
+}
+.curr-list ul li a .bage.classic{
+    background-image: url(../images/curation/C.png);
+}
+.curr-list ul li a .bage.film{
+    background-image: url(../images/curation/F.png);
+}
+.curr-list ul li a .c-img{
+    overflow: hidden;
+    width:170px;
+    height:244px;
+    border-radius: 10px;
+}
+.curr-list ul li a .c-img img{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.curr-list ul li a .tit{
+    overflow: hidden;
+    display: block;
+    width:100%;
+    padding-top:10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

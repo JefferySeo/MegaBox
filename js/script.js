@@ -94,7 +94,7 @@ const pause = document.getElementsByClassName('btn-pause')[0]
 let interval = setInterval(slideBenefit, 5000);
 
 function playSlide(){
-    setInterval(slideBenefit, 5000);
+    interval = setInterval(slideBenefit, 5000);
     play.style.display = 'none';
     pause.style.display = 'block';
 }
